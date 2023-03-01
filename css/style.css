@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 90px 0px 0;
+    
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+
+.header {
+    background-color: #fff;
+    box-shadow: 0 1px 5px #0769e9;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logo-nav img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    line-height: 80px;
+}
+
+
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color: #0769e9;
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: #fff;
+    border: none;
+    background: none;
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60x;
+    cursor: pointer;
+
+    display: none;
+}
+
+.horizontal-padding {
+    padding-left: 25px;
+    padding-right: 25px ;
+}
+
+.vertical-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+@media (min-width: 950px) {
+    .horizontal-padding {
+        padding-left: 70px;
+        padding-right: 70px ;
+    }
+    
+    .vertical-padding {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .header {
+        height: 60px;
+        background-color: #fff;
+        box-shadow: 0 1px 5px #0769e9;
+        
+    }
+    
+    
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #0769e9;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+
+    }
+    
+    .nav-menu a {
+        color: #fff ;
+    }
+    
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: #034574;
+        transition: 0.5s;
+
+    }
+
+    .nav-toggle {
+        display: block;
+        color: #000;
+        border: none
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+    
+}
